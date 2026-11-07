@@ -8,7 +8,13 @@ from safety import drugs, check
 from pdf_rx import make_pdf
 
 st.set_page_config(page_title="Smart Rx Care", page_icon="💊", layout="wide")
-db.init()
+try:
+    db.init()
+except Exception as e:
+    st.error("Database connection failed. Details below (password hidden):")
+    st.code(f"{type(e).__name__}: {getattr(e, 'orig', e)}")
+    st.json(db.describe_url())
+    st.stop()
 
 st.sidebar.title("💊 Smart Rx Care")
 st.sidebar.caption("Demo with synthetic data. AI assists, humans decide.")

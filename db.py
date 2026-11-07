@@ -30,6 +30,17 @@ def _clean(url):
     return scheme + "://" + rest
 
 
+def describe_url():
+    """Safe description of the connection settings (never includes the password)."""
+    from sqlalchemy.engine import make_url
+    try:
+        u = make_url(_clean(_url()))
+        return {"driver": u.drivername, "host": u.host, "port": u.port, "user": u.username,
+                "database": u.database, "password_length": len(u.password or "")}
+    except Exception as e:
+        return {"could_not_parse": type(e).__name__}
+
+
 @st.cache_resource
 def engine():
     url = _clean(_url())

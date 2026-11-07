@@ -15,9 +15,24 @@ def _url():
         return os.getenv("DATABASE_URL", "sqlite:///smartrx.db")
 
 
+def _clean(url):
+    """Tolerate common paste mistakes: quotes, spaces, [brackets] around the password,
+    and special characters in the password (re-encoded safely)."""
+    from urllib.parse import quote, unquote
+    url = url.strip().strip("\"'").replace("[", "").replace("]", "")
+    if "://" not in url:
+        return url
+    scheme, rest = url.split("://", 1)
+    if "@" in rest:
+        creds, host = rest.rsplit("@", 1)
+        user, _, pw = creds.partition(":")
+        rest = quote(unquote(user), safe=".") + ":" + quote(unquote(pw), safe="") + "@" + host
+    return scheme + "://" + rest
+
+
 @st.cache_resource
 def engine():
-    url = _url()
+    url = _clean(_url())
     if url.startswith("postgres://"):
         url = url.replace("postgres://", "postgresql+psycopg2://", 1)
     elif url.startswith("postgresql://"):

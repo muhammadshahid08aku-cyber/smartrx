@@ -1,0 +1,39 @@
+drug_a,drug_b,severity,note
+Warfarin,Aspirin,major,Greatly increased bleeding risk
+Warfarin,Ibuprofen,major,Increased bleeding risk and GI bleeding
+Warfarin,Diclofenac,major,Increased bleeding risk and GI bleeding
+Warfarin,Ciprofloxacin,major,Raises INR; bleeding risk
+Warfarin,Metronidazole,major,Raises INR; bleeding risk
+Warfarin,Fluconazole,major,Raises INR; bleeding risk
+Warfarin,Co-trimoxazole,major,Raises INR; bleeding risk
+Warfarin,Clopidogrel,major,Additive bleeding risk
+Warfarin,Azithromycin,moderate,May raise INR; monitor
+Aspirin,Ibuprofen,moderate,Ibuprofen can blunt aspirin's antiplatelet effect; GI bleeding risk
+Aspirin,Diclofenac,moderate,Additive GI bleeding risk
+Aspirin,Clopidogrel,moderate,Additive bleeding risk; intentional only under specialist plan
+Clopidogrel,Omeprazole,moderate,Omeprazole may reduce clopidogrel activation; consider pantoprazole
+Enalapril,Losartan,major,Dual RAAS blockade: hyperkalaemia and kidney injury risk
+Enalapril,Ibuprofen,moderate,NSAID can reduce effect and harm kidneys
+Enalapril,Diclofenac,moderate,NSAID can reduce effect and harm kidneys
+Losartan,Ibuprofen,moderate,NSAID can reduce effect and harm kidneys
+Losartan,Diclofenac,moderate,NSAID can reduce effect and harm kidneys
+Furosemide,Ibuprofen,moderate,NSAID can reduce diuretic effect and harm kidneys
+Furosemide,Diclofenac,moderate,NSAID can reduce diuretic effect and harm kidneys
+Tramadol,Diazepam,major,Additive sedation and respiratory depression
+Tramadol,Ondansetron,moderate,Serotonin syndrome risk; ondansetron may reduce tramadol effect
+Ciprofloxacin,Prednisolone,moderate,Higher risk of tendon rupture
+Ciprofloxacin,Ferrous sulfate,moderate,Iron reduces ciprofloxacin absorption; separate by 2+ hours
+Ciprofloxacin,Metformin,moderate,Blood sugar disturbances
+Ciprofloxacin,Azithromycin,moderate,Additive QT prolongation
+Doxycycline,Ferrous sulfate,moderate,Iron reduces doxycycline absorption; separate by 2-3 hours
+Levothyroxine,Ferrous sulfate,moderate,Iron reduces levothyroxine absorption; separate by 4 hours
+Atorvastatin,Fluconazole,moderate,Raised statin levels; muscle toxicity risk
+Glimepiride,Fluconazole,major,Severe hypoglycaemia risk
+Glimepiride,Co-trimoxazole,moderate,Hypoglycaemia risk
+Domperidone,Azithromycin,major,QT prolongation and arrhythmia risk
+Domperidone,Fluconazole,major,QT prolongation and arrhythmia risk
+Ondansetron,Azithromycin,moderate,Additive QT prolongation
+Metronidazole,Fluconazole,moderate,Additive QT prolongation
+Atenolol,Salbutamol,moderate,Beta blocker can oppose salbutamol effect
+Diazepam,Cetirizine,minor,Additive drowsiness
+Amlodipine,Atorvastatin,minor,Small rise in atorvastatin level; usually acceptable

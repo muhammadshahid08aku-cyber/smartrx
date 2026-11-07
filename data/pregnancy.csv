@@ -1,0 +1,22 @@
+generic_name,pregnancy_risk,note
+Warfarin,avoid,Teratogenic; specialist management only
+Atorvastatin,avoid,Statins are generally avoided in pregnancy
+Enalapril,avoid,ACE inhibitors harm the fetus in 2nd/3rd trimester
+Losartan,avoid,ARBs harm the fetus in 2nd/3rd trimester
+Doxycycline,avoid,Tetracyclines affect fetal teeth and bone
+Ciprofloxacin,avoid,Fluoroquinolones generally avoided
+Co-trimoxazole,caution,Avoid in first trimester and near term
+Ibuprofen,caution,Avoid after 20 weeks; avoid in 3rd trimester
+Diclofenac,caution,Avoid after 20 weeks; avoid in 3rd trimester
+Aspirin,caution,Analgesic doses avoided; low dose only on specialist advice
+Tramadol,caution,Opioid; neonatal withdrawal risk
+Diazepam,caution,Neonatal sedation/withdrawal risk
+Fluconazole,avoid,High doses linked to birth defects
+Metronidazole,caution,Generally avoided in first trimester
+Prednisolone,caution,Use only if benefit outweighs risk
+Levothyroxine,ok,Continue; dose often needs adjusting
+Folic acid,ok,Recommended
+Ferrous sulfate,ok,Commonly used
+Paracetamol,ok,Preferred analgesic at usual doses
+Amoxicillin,ok,Generally considered safe
+Cefixime,ok,Generally considered safe

@@ -1,0 +1,16 @@
+rx_id,patient_name,age,weight_kg,pregnant,allergies,diagnosis,generic_name,dose_mg,times_per_day,duration_days
+DEMO-0001,Demo Patient A,34,70,false,,Fever and body ache,Paracetamol,500,3,3
+DEMO-0002,Demo Patient B,52,82,false,,Type 2 diabetes,Metformin,500,2,30
+DEMO-0002,Demo Patient B,52,82,false,,Type 2 diabetes,Glimepiride,2,1,30
+DEMO-0003,Demo Patient C,45,75,false,Penicillin,Throat infection,Amoxicillin,500,3,5
+DEMO-0004,Demo Patient D,61,68,false,,Atrial fibrillation with knee pain,Warfarin,5,1,30
+DEMO-0004,Demo Patient D,61,68,false,,Atrial fibrillation with knee pain,Ibuprofen,400,3,5
+DEMO-0005,Demo Patient E,29,58,true,,Urinary tract infection,Ciprofloxacin,500,2,7
+DEMO-0006,Demo Patient F,40,77,false,,Hypertension,Amlodipine,5,1,30
+DEMO-0006,Demo Patient F,40,77,false,,Hypertension,Atorvastatin,20,1,30
+DEMO-0007,Demo Patient G,38,64,false,,Back pain,Diclofenac,50,3,5
+DEMO-0007,Demo Patient G,38,64,false,,Back pain,Ibuprofen,400,3,5
+DEMO-0008,Demo Patient H,70,66,false,,Hypertension with arthritis,Enalapril,5,1,30
+DEMO-0008,Demo Patient H,70,66,false,,Hypertension with arthritis,Losartan,50,1,30
+DEMO-0009,Demo Patient I,26,55,false,,Seasonal allergy,Cetirizine,10,1,7
+DEMO-0010,Demo Patient J,48,80,false,Sulfa,Chest infection,Co-trimoxazole,480,2,7

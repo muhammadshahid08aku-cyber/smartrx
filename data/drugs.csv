@@ -1,0 +1,43 @@
+generic_name,atc_code,form,strength,route,drug_class,rx_only,controlled
+Paracetamol,N02BE01,Tablet,500 mg,Oral,Analgesic/antipyretic,false,false
+Ibuprofen,M01AE01,Tablet,400 mg,Oral,NSAID,false,false
+Diclofenac,M01AB05,Tablet,50 mg,Oral,NSAID,true,false
+Aspirin,B01AC06,Tablet,75 mg,Oral,Antiplatelet,false,false
+Tramadol,N02AX02,Capsule,50 mg,Oral,Opioid analgesic,true,true
+Amoxicillin,J01CA04,Capsule,500 mg,Oral,Penicillin antibiotic,true,false
+Amoxicillin/Clavulanic acid,J01CR02,Tablet,625 mg,Oral,Penicillin antibiotic,true,false
+Azithromycin,J01FA10,Tablet,500 mg,Oral,Macrolide antibiotic,true,false
+Ciprofloxacin,J01MA02,Tablet,500 mg,Oral,Fluoroquinolone antibiotic,true,false
+Cefixime,J01DD08,Capsule,400 mg,Oral,Cephalosporin antibiotic,true,false
+Doxycycline,J01AA02,Capsule,100 mg,Oral,Tetracycline antibiotic,true,false
+Co-trimoxazole,J01EE01,Tablet,480 mg,Oral,Sulfonamide antibiotic,true,false
+Metronidazole,J01XD01,Tablet,400 mg,Oral,Nitroimidazole antimicrobial,true,false
+Fluconazole,J02AC01,Capsule,150 mg,Oral,Antifungal,true,false
+Omeprazole,A02BC01,Capsule,20 mg,Oral,Proton pump inhibitor,false,false
+Pantoprazole,A02BC02,Tablet,40 mg,Oral,Proton pump inhibitor,true,false
+Domperidone,A03FA03,Tablet,10 mg,Oral,Prokinetic,true,false
+Ondansetron,A04AA01,Tablet,4 mg,Oral,Antiemetic,true,false
+Hyoscine butylbromide,A03BB01,Tablet,10 mg,Oral,Antispasmodic,false,false
+Loperamide,A07DA03,Capsule,2 mg,Oral,Antidiarrhoeal,false,false
+Oral rehydration salts,A07CA,Sachet,20.5 g,Oral,Rehydration,false,false
+Metformin,A10BA02,Tablet,500 mg,Oral,Biguanide antidiabetic,true,false
+Glimepiride,A10BB12,Tablet,2 mg,Oral,Sulfonylurea antidiabetic,true,false
+Insulin human (regular),A10AB01,Injection,100 IU/mL,Subcutaneous,Insulin,true,false
+Amlodipine,C08CA01,Tablet,5 mg,Oral,Calcium channel blocker,true,false
+Losartan,C09CA01,Tablet,50 mg,Oral,ARB antihypertensive,true,false
+Enalapril,C09AA02,Tablet,5 mg,Oral,ACE inhibitor,true,false
+Atenolol,C07AB03,Tablet,50 mg,Oral,Beta blocker,true,false
+Furosemide,C03CA01,Tablet,40 mg,Oral,Loop diuretic,true,false
+Atorvastatin,C10AA05,Tablet,20 mg,Oral,Statin,true,false
+Warfarin,B01AA03,Tablet,5 mg,Oral,Anticoagulant,true,false
+Clopidogrel,B01AC04,Tablet,75 mg,Oral,Antiplatelet,true,false
+Salbutamol,R03AC02,Inhaler,100 mcg/dose,Inhalation,Beta-2 agonist,true,false
+Montelukast,R03DC03,Tablet,10 mg,Oral,Leukotriene antagonist,true,false
+Cetirizine,R06AE07,Tablet,10 mg,Oral,Antihistamine,false,false
+Loratadine,R06AX13,Tablet,10 mg,Oral,Antihistamine,false,false
+Prednisolone,H02AB06,Tablet,5 mg,Oral,Corticosteroid,true,false
+Levothyroxine,H03AA01,Tablet,50 mcg,Oral,Thyroid hormone,true,false
+Ferrous sulfate,B03AA07,Tablet,200 mg,Oral,Iron supplement,false,false
+Folic acid,B03BB01,Tablet,5 mg,Oral,Vitamin,false,false
+Cholecalciferol (Vitamin D3),A11CC05,Capsule,50000 IU,Oral,Vitamin,false,false
+Diazepam,N05BA01,Tablet,5 mg,Oral,Benzodiazepine,true,true

@@ -7,6 +7,13 @@ from reportlab.lib.utils import ImageReader
 from reportlab.pdfgen import canvas
 
 
+def qr_png(rx_id, sig):
+    """PNG bytes of the prescription QR code (same payload as in the PDF)."""
+    q = io.BytesIO()
+    qrcode.make(f"{rx_id}|{sig[:16]}").save(q, format="PNG")
+    return q.getvalue()
+
+
 def make_pdf(rx_id, sig, doctor, patient, age, allergies, diagnosis, rows, created):
     buf = io.BytesIO()
     c = canvas.Canvas(buf, pagesize=A4)

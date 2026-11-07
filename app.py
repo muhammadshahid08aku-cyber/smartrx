@@ -48,19 +48,35 @@ def show_alerts(alerts):
         st.markdown(f"{COLORS[a['level']]} **{a['type']}**: {a['msg']}")
 
 
+FREE_LLAMA_MODEL = "llama-3.1-8b-instant"   # free Llama model on Groq's free tier (fast, high daily limit)
+
+
+def _secret(name, default=""):
+    try:
+        return st.secrets[name]
+    except Exception:
+        return os.getenv(name, default)
+
+
 def groq_explain(rx_items, lang):
-    key = st.secrets.get("GROQ_API_KEY", os.getenv("GROQ_API_KEY", "")) if hasattr(st, "secrets") else ""
+    """Free Llama model via Groq. Explains only; never changes doses or adds medicines."""
+    key = _secret("GROQ_API_KEY")
     if not key:
-        return "Set GROQ_API_KEY to enable plain-language explanations."
-    from groq import Groq
-    meds = "; ".join(f"{r['generic_name']} {r['dose_mg']:g} mg, {r['times_per_day']}x/day for {r['duration_days']} days" for r in rx_items)
-    prompt = (f"Explain these prescribed medicines to a patient in simple {lang}: how to take each, "
-              f"common side effects, and when to call the doctor. Do not change doses or add medicines. "
-              f"Medicines: {meds}")
-    r = Groq(api_key=key).chat.completions.create(
-        model=os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile"),
-        messages=[{"role": "user", "content": prompt}], temperature=0.2)
-    return r.choices[0].message.content + "\n\n_For clinical review. Follow your doctor's instructions._"
+        return "Add GROQ_API_KEY in the app Secrets (free key from console.groq.com) to enable explanations."
+    try:
+        from groq import Groq
+        meds = "; ".join(f"{r['generic_name']} {r['dose_mg']:g} mg, {r['times_per_day']}x/day for {r['duration_days']} days"
+                         for r in rx_items)
+        prompt = (f"You are a pharmacy assistant. Explain these prescribed medicines to a patient in simple {lang}. "
+                  f"For each medicine give: what it is for in general terms, how to take it, food advice, common side effects, "
+                  f"and when to call the doctor. Do not change doses, add medicines or diagnose. Keep it short.\n"
+                  f"Medicines: {meds}")
+        r = Groq(api_key=key).chat.completions.create(
+            model=_secret("GROQ_MODEL", FREE_LLAMA_MODEL),
+            messages=[{"role": "user", "content": prompt}], temperature=0.2, max_tokens=700)
+        return r.choices[0].message.content + "\n\n_AI-generated, for clinical review. Follow your doctor's and pharmacist's instructions._"
+    except Exception as e:
+        return f"Explanation unavailable right now (free-tier limit or network). Details: {type(e).__name__}"
 
 
 # ---------------- Doctor ----------------
